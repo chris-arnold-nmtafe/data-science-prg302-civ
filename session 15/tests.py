@@ -2,7 +2,7 @@ import unittest
 import wordle
 
 class WordleTests(unittest.TestCase):
-    def test_ok(self):
+    def test_hello(self):
         #arrange
         guess = "hello"
         target = "hello"
@@ -10,7 +10,7 @@ class WordleTests(unittest.TestCase):
         result = wordle.score_guess(target,guess)
         #assert
         self.assertEqual(result,(2,2,2,2,2))
-    def test_not_ok(self):
+    def test_scram(self):
         #arrange
         guess = "scram"
         target = "hello"
@@ -18,7 +18,7 @@ class WordleTests(unittest.TestCase):
         result = wordle.score_guess(target,guess)
         #assert
         self.assertEqual(result,(0,0,0,0,0))
-    def test_partial(self):
+    def test_there(self):
         #arrange
         guess = "there"
         target = "hello"
@@ -26,7 +26,7 @@ class WordleTests(unittest.TestCase):
         result = wordle.score_guess(target,guess)
         #assert
         self.assertEqual(result,(0,1,1,0,0))
-    def test_double_1(self):
+    def test_shell(self):
         #arrange
         guess = "shell"
         target = "hello"
@@ -34,7 +34,7 @@ class WordleTests(unittest.TestCase):
         result = wordle.score_guess(target,guess)
         #assert
         self.assertEqual(result,(0,1,1,2,1))
-    def test_double_2(self):
+    def test_ollie(self):
         #arrange
         guess = "ollie"
         target = "hello"
@@ -42,7 +42,7 @@ class WordleTests(unittest.TestCase):
         result = wordle.score_guess(target,guess)
         #assert
         self.assertEqual(result,(1,1,2,0,1))
-    def test_double_3(self):
+    def test_lllll(self):
         #arrange
         guess = "lllll"
         target = "hello"
